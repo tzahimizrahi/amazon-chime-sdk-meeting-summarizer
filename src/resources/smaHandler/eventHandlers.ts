@@ -71,7 +71,6 @@ export async function callAnsweredHandler(
 
   actions = [
     pauseAction({ callId: callId, milliSeconds: 1000 }),
-    speakAction({ callId: callId, text: introMessage }),
     pauseAction({ callId: callId, milliSeconds: 5000 }),
     sendDigitsAction({
       callId: callId,
@@ -79,7 +78,6 @@ export async function callAnsweredHandler(
       milliSeconds: 300,
     }),
     pauseAction({ callId: callId, milliSeconds: 12000 }),
-    speakAction({ callId: callId, text: startMessage }),
     pauseAction({ callId: callId, milliSeconds: 1000 }),
     recordAudioAction({ callId: callId, prefix: prefix }),
   ];
